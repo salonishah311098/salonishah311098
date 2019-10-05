@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  	<style type="text/css">
+  		body
+  		{
+	 		font-family: 'Calibri';
+		}
+		#vert
+		{
+			border-right:2px solid #ddd;
+			text-align: right;
+		}
+		#vert1
+		{
+			padding-top: 100px;
+		}
+		#s1
+		{
+			margin-bottom: 10px;
+			margin-left: 40px;
+			padding-right: 18px;
+			font-size: 23px;
+			color: rgb(100,100,100);
+		}
+		.active
+		{
+			border-right:2px solid;
+
+		}
+		#mytab
+		{
+			border-bottom: 2px solid #ddd
+		}
+		#my1
+		{
+			padding-left: 50px;
+		}
+		.flag
+		{
+			max-height: 70px;
+			max-width: 70px;
+		}
+		#co
+		{
+			background-color: rgb(253,253,253);
+			padding-left: 90px;
+			margin-left: 20px;
+		}
+		#tit
+		{
+			background-color: rgb(250,250,250);
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 20px;
+			width: 1100px;
+			margin-left: 110px;
+		}
+		#bt1
+		{
+			padding-right: 50px;
+			padding-left: 50px;
+			background-color: white;
+			border-color: rgb(64,224,208);
+			color: rgb(64,224,208);	
+			border-width: 2px;
+		}
+		#bt2
+		{
+			padding-left: 30px;
+			padding-right: 30px;
+			background-color: rgb(250,250,250);
+			border-color: rgb(64,224,208);
+			color: rgb(64,224,208);	
+		}
+		#cd
+		{
+			background-color: rgb(253,253,253);
+			padding-top: 60px;
+		}
+		#cd1
+		{
+			margin-left: 95px;
+			margin-right: 50px;
+			width: 333px;
+			border: 5px solid transparent;
+			/*box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);*/
+		}
+		#cd2
+		{
+			margin-right: 50px;
+			width: 333px;
+			border: 5px solid transparent;
+			/*box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);*/
+		}
+		#cd3
+		{
+			width: 334px;
+			border: 5px solid transparent;
+			/*box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);*/
+		}
+		.card:hover
+		{
+  			-ms-transform: scale(1.5);
+  			-webkit-transform: scale(1.5); 
+  			transform: scale(1.1); 
+		}
+		#he1
+		{
+			background-color: white;
+			border:2px solid transparent;
+		}
+		#im1
+		{
+			border: 2px solid transparent;
+			width: 65px;
+			height: 65px
+		}
+		#te1
+		{
+			margin-left: 20px;
+			padding-top: 8px;
+			font-size: 18px;
+			text-align: left;
+		}
+		#te1:hover
+		{
+			color: rgb(64,224,208);
+		}
+		#te2
+		{
+			margin-left: 20px;
+			padding-top: 8px;
+			font-size: 18px;
+			text-align: left;
+		}
+		#te2:hover
+		{
+			color: rgb(64,224,208);
+		}
+		#te3
+		{
+			margin-left: 20px;
+			padding-top: 8px;
+			font-size: 18px;
+			text-align: left;
+		}
+		#te3:hover
+		{
+			color: rgb(64,224,208);
+		}
+		#te4
+		{
+			margin-left: 20px;
+			padding-top: 4px;
+			font-size: 18px;
+			text-align: left;
+		}
+		#te4:hover
+		{
+			color: rgb(64,224,208);
+		}
+		#rcorner
+		{
+			border-radius: 3px;
+			border-color: rgb(255,0,0);
+			text-decoration-color: rgb(255,0,0);
+  			border: 2px solid;
+  			padding: 5px; 
+ 			width: 200px;
+  			height: 30px;
+		}
+		#f
+		{
+			background-color: rgb(253,253,253);	
+		}
+		#f1
+		{
+			font-size: 35px;
+			padding-left: 480px;
+			padding-top: 100px;
+		}
+		.social-icon
+		{
+			padding-right: 40px;
+			color: rgb(150,150,150);
+		}
+		.social-icon:hover
+		{
+			color: rgb(150,150,150);
+		}
+		#f2
+		{
+			color: rgb(150,150,150);
+			font-size: 16px;
+			text-align: center;
+			padding-left: 450px;
+		}
+		#f3
+		{
+			color: rgb(150,150,150);
+			font-size: 16px;
+			padding-left: 360px;
+		}
+		#fp1
+		{
+			padding-right: 15px;
+		}
+		.active
+		{
+			border-right-color: blue;
+			border-right-width: 10px
+		}
+  	</style>
+</head>
+<body data-spy="scroll">
+	<div class="row">
+		<div class="col-sm-1" id="vert">
+			<ul class="nav nav-pills nav-stacked" id="vert1">
+    			<li class="active">
+    				<button type="button" class="btn" id="s1"><i class='fas'>&#xf009;</i></button>
+    			</li>
+    			<li>
+    				<button type="button" class="btn" id="s1"><i class="fa fa-search" aria-hidden="true"></i></button>
+    			</li>
+    			<li>
+    				<button type="button" class="btn" id="s1"><i class="fa fa-university" aria-hidden="true"></i></button>
+    			</li>
+    		</ul>
+		</div>
+		<div class="col-sm-11">
+			<nav class="navbar navbar-expand-lg" id="mytab">
+				<ul class="navbar-nav mr-auto" id="my1">
+    				<li class="nav-item p-1">
+    					<a><h4>white<b>pandä</b></h4></a>
+    				</li>
+    			</ul>
+    			<ul class="navbar-nav ml-auto">
+    				<li class="nav-item">
+						<a><img src="images/bell.png" class="flag"></a>
+						<a><img src="images/ab.png" class="flag"></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="row" style="background-color: rgb(253,253,253);">
+			<div class="row py-5" id="co">
+				<h1><b>Content Store</b></h1>
+			</div>
+			<div class="row" id="tit">
+				<h5 style="color: rgb(64,224,208);"><b>Got Bulk orders or almost similar orders ? Fill the order brief in an excel sheet</b></h5><br><br>
+				<h6 style="color: rgb(170,170,170);">If you're wondering about an easy way to place orders in large numbers, we provide a way customized just for that.<br>Download our excel sheet, and fill the order brief i the prescribed formaat and submit. In case you need any help, <u>we <br>are just a click away to assist you in placing your order</u><br><br><button type="button" class="btn" id="bt2"><b>Order via Excel Sheet</b></button></h6>
+			</div>
+			</div>
+			<div class="row" id="cd">
+				<div class="card" id="cd1">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>Blog/Articles<br>from $500</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd2">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te2">
+            					<p>Newsletter/Emailer<br>from $1000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd3">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>Whitepaper<br>from $2000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="cd">
+				<div class="card" id="cd1">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>e-Book<br>from $1000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd2">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>Report/Guide<br>from $1000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd3">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te3">
+            					<p>Product Description<br>from $500</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="cd">
+				<div class="card" id="cd1">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te2">
+            					<p>Website Content<br>from $1000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd2">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png'" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>Video Script<br>from $1000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+				<div class="card" id="cd3">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te4">
+            					<p>Company Profile/<br>Brochure<br>from $2000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="cd">
+				<div class="card" id="cd1">
+					<div class="card-header" id="he1">
+          				<ul class="nav nav-tabs card-header-tabs" role="tablist">
+            				<li class="nav-item" id="im1">
+              					<img id="im1" class="rounded-circle" src="images/pic.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+            				</li>
+            				<li class="nav-item" id="te1">
+            					<p>Press Release<br>from $2000</p>
+            				</li>
+            			</ul>
+            		</div>
+					<div class="card-body">
+						<p class="card-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users</p>
+						<button type="button" class="btn btn-outline-primary" id="bt1">Order</button>
+					</div>
+				</div>
+			</div>
+			<footer id="f">
+				<div class="row" id="f1">
+					<p>
+						<a class="social-icon" href="#"><i class="fab fa-twitter"></i></a> 
+						<a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a> 
+						<a class="social-icon" href="#"><i class="fab fa-instagram"></i></a> 
+						<a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+					</p>
+				</div>
+				<div class="row center-block" id="f2">
+					<p>Copyright @ 2019 White Panda Media Pvt. Ltd.<br>All Rights reserved</p>
+				</div>
+				<div class="row" id="f3">
+					<p id="fp1"><u>Privacy Policy</u></p>
+					<p id="fp1">|</p>
+					<p id="fp1"><u>Terms Of Service</u></p>  
+					<p id="fp1">|</p>  
+					<p id="fp1"><u>Service Agreement</u></p>  
+					<p id="fp1">|</p> 
+					<p><u>Contact Us</u></p>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function hover(element) 
+		{
+  			element.setAttribute('src', "images/pic1.png");
+		}
+		function unhover(element) 
+		{
+  			element.setAttribute('src', "images/pic.png");
+		}
+	</script>
+</body>
+</html>
